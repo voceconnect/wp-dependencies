@@ -1,0 +1,17 @@
+{
+    "name": "voceconnect/wp-composition",
+    "description": "A composer package for WordPress to manage plugin dependencies.",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Michael Prettty",
+            "email": "mpretty@voceconnect.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "files": ["functions.php"]
+    }
+}
