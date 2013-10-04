@@ -9,7 +9,7 @@ A composer package for WordPress to autoload plugin dependencies.
 
 ##### Register the Dependencies and WP Dependencies Package
 
-Add a reference to wp-composition to your theme's or plugin's composer.json along with
+Add a reference to wp-dependencies to your theme's or plugin's composer.json along with
 any other plugins that need to be active.
 
 ```
@@ -46,7 +46,7 @@ any other plugins that need to be active.
 
 #### Add Composer's Autoload
 
-Include Composer's ```autoload.php``` in the theme's ```functions.php```
+Include Composer's ```autoload.php``` in the theme's ```functions.php``` or plugin's main file.
 
 ```
 // bootstrap composer autoload for dependencies
@@ -57,7 +57,7 @@ if(file_exists( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'plugins' . DIRECTOR
 
 #### Load Dependencies
 
-For dependencies or plugins that do not autoload through composer, you will need to load the depency through one of two ways.
+For dependencies or plugins that do not autoload through composer, you will need to load the dependency through one of two ways.
 
 ```
 do_action( 'wp_load_dependency', 'some-plugin-name', 'main-plugin-file.php');
