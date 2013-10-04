@@ -1,5 +1,5 @@
 {
-    "name": "voceconnect/wp-composition",
+    "name": "voceconnect/wp-dependencies",
     "version": "0.1.0",
     "type": "library",
     "description": "A composer package for WordPress to manage plugin dependencies.",
