@@ -27,7 +27,7 @@ class WP_Dependency_Loader {
 
 	public function filter_plugins_url( $url, $path, $plugin ) {
 		//core plugin directories are handled by default.
-		if ( strpos( $url, WPMU_PLUGIN_URL ) === 0 || strpos( WP_PLUGIN_DIR, $plugin ) === 0 ) {
+		if ( empty($plugin) || strpos( $url, WPMU_PLUGIN_URL ) === 0 || strpos( WP_PLUGIN_DIR, $plugin ) === 0 ) {
 			return $url;
 		}
 
