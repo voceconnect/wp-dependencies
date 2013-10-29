@@ -1,8 +1,7 @@
 {
     "name": "voceconnect/wp-dependencies",
-    "version": "0.1.0",
     "type": "library",
-    "description": "A composer package for WordPress to manage plugin dependencies.",
+    "description": "A composer package for WordPress to help manage plugin dependencies.",
     "license": "GPL-2.0+",
     "authors": [
         {
@@ -11,7 +10,7 @@
         }
     ],
     "require": {
-
+        "php": ">=5.2.4"
     },
     "autoload": {
         "classmap": ["class-wp-dependency-loader.php"],
