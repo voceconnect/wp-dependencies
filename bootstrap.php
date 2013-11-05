@@ -23,7 +23,7 @@ if ( !function_exists( 'wp_load_dependency' ) ) {
 
 if ( !has_action( 'wp_load_dependency' ) ) {
 	$dep_loader = new WP_Dependency_Loader();
-	$dep_loader->register_vendor_directory( WP_CONTENT_DIR );
+	$dep_loader->register_vendor_directory( WP_PLUGIN_DIR );
 	add_action( 'wp_load_dependency', array( $dep_loader, 'load_plugin' ), 10, 2 );
 	add_action( 'register_dependency_directory', array( $dep_loader, 'register_vendor_directory' ) );
 	add_filter( 'plugins_url', array( $dep_loader, 'filter_plugins_url' ), 10, 3 );
