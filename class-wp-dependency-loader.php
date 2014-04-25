@@ -35,13 +35,13 @@ class WP_Dependency_Loader {
 		$stylesheet_dir = get_stylesheet_directory();
 		$template_dir = get_template_directory();
 		if ( !empty( $plugin ) && is_string( $plugin ) ) {
-			if ( strpos( $stylesheet_dir, $plugin ) === 0 ) {
+			if ( strpos( $plugin, $stylesheet_dir ) === 0 ) {
 				$folder = str_replace( $stylesheet_dir, '', dirname( $plugin ) );
 				$url = get_stylesheet_directory_uri() . '/' . ltrim( $folder, '/' );
 				if ( !empty( $path ) && is_string( $path ) && strpos( $path, '..' ) === false ) {
 					$url .= '/' . ltrim( $path, '/' );
 				}
-			} elseif ( strpos( $template_dir, $plugin ) === 0 ) {
+			} elseif ( strpos( $plugin, $template_dir ) === 0 ) {
 				$folder = str_replace( $template_dir, '', dirname( $plugin ) );
 				$url = get_template_directory_uri() . '/' . ltrim( $folder, '/' );
 				if ( !empty( $path ) && is_string( $path ) && strpos( $path, '..' ) === false ) {
